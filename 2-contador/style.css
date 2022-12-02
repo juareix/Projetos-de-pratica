@@ -1,0 +1,49 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    padding: 40px 20px;
+}
+h1{
+    font-size: 50px;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+span{
+    font-size: 100px;
+}
+
+.space-btn{
+    display: flex;
+}
+.btn{
+    margin: 20px;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 3px solid;
+}
+
+.decremento:hover{
+    border-color: rgb(255, 0, 0);
+}
+
+.encremento:hover{
+    border-color: rgb(0, 255, 0);
+}
+
+.reset:hover{
+    border-color: rgb(0, 0, 255);
+}
