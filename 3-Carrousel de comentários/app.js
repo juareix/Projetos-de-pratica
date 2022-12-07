@@ -50,7 +50,7 @@ const randomBtn = document.querySelector(".random-btn");
 // variaveis de ambiente
 let currentItem = 0;
 
-// load initial item
+// carrega o primeiro item na tela assim q a tela carregar
 window.addEventListener("DOMContentLoaded", () => {
   const item = reviews[currentItem];
   img.src = item.img;
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
   info.textContent = item.text;
 });
 
-// show person based on item
+// func q vai lidar com a exibição em si
 function showPerson(person) {
   const item = reviews[person];
   img.src = item.img;
@@ -67,24 +67,37 @@ function showPerson(person) {
   job.textContent = item.job;
   info.textContent = item.text;
 }
-// show next person
-nextBtn.addEventListener("click", function () {
+
+// func q exibe p proximo
+nextBtn.addEventListener("click", () => {
   currentItem++;
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
   }
   showPerson(currentItem);
 });
-// show prev person
-prevBtn.addEventListener("click", function () {
+// func q exibe o item anterior
+prevBtn.addEventListener("click", () => {
   currentItem--;
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
   }
   showPerson(currentItem);
 });
-// show random person
-randomBtn.addEventListener("click", function () {
+// func pra exibir o proximo de forma aleatória
+randomBtn.addEventListener("click", () => {
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson(currentItem);
 });
+
+//faz os reviews mudarem de 10 em 10 segundos caso o usuario não aperte o botão
+
+setInterval(
+  () => {
+    currentItem++;
+    if (currentItem > reviews.length - 1) {
+      currentItem = 0;
+    }
+    showPerson(currentItem);
+  }, 10000
+)
