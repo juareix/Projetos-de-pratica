@@ -13,7 +13,9 @@ Neste repositório estão alocados esses projetos, em sua maioria tirados de exe
 
 - [3-Carrousel de comentários](https://github.com/juareix/Projetos-de-pratica/tree/main/3-Carrousel%20de%20coment%C3%A1rios)
 
-- [3-NavBar](https://github.com/juareix/Projetos-de-pratica/tree/main/4-navbar)
+- [4-NavBar](https://github.com/juareix/Projetos-de-pratica/tree/main/4-navbar)
+
+- [5-Sidebar](https://github.com/juareix/Projetos-de-pratica/tree/main/4-Sidebar)
 
 
 
